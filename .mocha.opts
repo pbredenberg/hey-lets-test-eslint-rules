@@ -1,0 +1,4 @@
+--require source-map-support/register
+--require ./tests/setup/before.ts
+--full-trace
+tests/**/*.test.ts

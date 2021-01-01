@@ -1,0 +1,63 @@
+{
+   "name": "@silvermine/hey-lets-test-eslint-rules",
+   "version": "0.1.0",
+   "description": "",
+   "main": "./dist/commonjs/index",
+   "types": "./dist/types/index.d.ts",
+   "module": "./dist/esm/index",
+   "scripts": {
+      "prepare": "grunt build",
+      "test": "check-node-version --npm 6.13.4 && TS_NODE_PROJECT='tests/tsconfig.json' TS_NODE_FILES=true nyc mocha --opts ./.mocha.opts",
+      "test:ci": "npm test -- --forbid-only"
+   },
+   "author": "Paul Bredenberg",
+   "license": "MIT",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/silvermine/hey-lets-test-eslint-rules.git"
+   },
+   "bugs": {
+      "url": "https://github.com/silvermine/hey-lets-test-eslint-rules/issues"
+   },
+   "homepage": "https://github.com/silvermine/hey-lets-test-eslint-rules#readme",
+   "devDependencies": {
+      "@commitlint/cli": "8.3.5",
+      "@commitlint/config-conventional": "8.3.4",
+      "@commitlint/travis-cli": "8.3.5",
+      "@silvermine/chai-strictly-equal": "1.1.0",
+      "@silvermine/eslint-config": "3.0.0-rc.0",
+      "@silvermine/typescript-config": "0.10.0",
+      "@types/chai": "4.1.7",
+      "@types/mocha": "5.2.5",
+      "@types/node": "8.10.36",
+      "@types/sinon": "5.0.5",
+      "@typescript-eslint/eslint-plugin": "3.10.1",
+      "@typescript-eslint/parser": "3.10.1",
+      "chai": "4.2.0",
+      "check-node-version": "4.0.2",
+      "coveralls": "3.0.2",
+      "cz-conventional-changelog": "2.1.0",
+      "grunt": "1.1.0",
+      "grunt-cli": "1.3.2",
+      "grunt-concurrent": "2.3.1",
+      "grunt-contrib-clean": "2.0.0",
+      "grunt-contrib-watch": "1.1.0",
+      "grunt-eslint": "22.0.0",
+      "grunt-exec": "3.0.0",
+      "mocha": "5.2.0",
+      "nyc": "13.3.0",
+      "sinon": "5.1.1",
+      "source-map-support": "0.5.16",
+      "standard-version": "7.1.0",
+      "ts-node": "7.0.1",
+      "typescript": "3.2.2"
+   },
+   "dependencies": {
+      "tslib": "1.9.3"
+   },
+   "config": {
+      "commitizen": {
+         "path": "./node_modules/cz-conventional-changelog"
+      }
+   }
+}
